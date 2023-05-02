@@ -17,7 +17,9 @@ import com.intellij.openapi.module.ModuleUtilCore;
 import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.redhat.devtools.intellij.MavenEditorTest;
+import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
 
 import java.io.File;
 
@@ -26,6 +28,7 @@ import java.io.File;
  *
  * @see <a href="https://github.com/redhat-developer/quarkus-ls/blob/master/microprofile.jdt/com.redhat.microprofile.jdt.test/src/main/java/com/redhat/microprofile/jdt/core/ProjectLabelTest.java">https://github.com/redhat-developer/quarkus-ls/blob/master/microprofile.jdt/com.redhat.microprofile.jdt.test/src/main/java/com/redhat/microprofile/jdt/core/ProjectLabelTest.java</a>
  */
+@Ignore("Re-enable this test when problem with LSPFileVirtualWrapper.dispose is fixed. It can currently cause a restart of the language server, see https://github.com/redhat-developer/intellij-quarkus/issues/840")
 public class MavenApplicationPropertiesCompletionTest extends MavenEditorTest {
 
 	@Test
